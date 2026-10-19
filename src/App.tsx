@@ -2,6 +2,8 @@ import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 
 import { Shell } from './app/Shell';
+import LondonPage from './pages/London/LondonPage.tsx';
+import LondonWp from './pages/London/LondonWp.tsx';
 
 const OrbitControlsPage = lazy(() => import('./pages/OrbitControlsPage'));
 const ScrollControlsPage = lazy(() => import('./pages/ScrollControlsPage'));
@@ -37,6 +39,7 @@ export function App() {
         <Route path="mesh-transmission" element={<MeshTransmissionPage />} />
         <Route path="*" element={<Navigate to="/orbit-controls" replace />} />
       </Route>
+      <Route path="london" element={<LondonWp />} />
     </Routes>
   );
 }
