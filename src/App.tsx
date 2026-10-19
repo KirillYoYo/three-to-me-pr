@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router';
 
 import { Shell } from './app/Shell';
-import LondonPage from './pages/London/LondonPage.tsx';
+import CityLondonPage from './pages/CityLondon/CityLondonPage.tsx';
 import LondonWp from './pages/London/LondonWp.tsx';
 
 const OrbitControlsPage = lazy(() => import('./pages/OrbitControlsPage'));
@@ -40,6 +40,7 @@ export function App() {
         <Route path="*" element={<Navigate to="/orbit-controls" replace />} />
       </Route>
       <Route path="london" element={<LondonWp />} />
+      <Route path="city-london" element={<CityLondonPage />} />
     </Routes>
   );
 }
